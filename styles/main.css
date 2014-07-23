@@ -58,8 +58,8 @@ body {
     font-size: 0.75em;
 }
 p {
-    margin-bottom: 1em;
     font-size: 1.8rem;
+    margin-bottom: 1em;
 }
 a:hover {
     color: #7389CD;
@@ -90,6 +90,8 @@ body,
     background-position-y: bottom;
 */
 }
+
+/*
 #overlay {
   display: none;
   position: fixed;
@@ -104,13 +106,13 @@ body,
   left: 48%;
   top: 30%;
 }
+*/
 
 #wrapper {
   position: relative;
   text-align: left;
   width: 83rem;
   margin: 0 auto;
-  padding-top: 15rem;
   /* -webkit-transform: scale(1.3); */
 }
 
@@ -118,102 +120,116 @@ header,
 address,
 article,
 section {
-    width: 45rem;
-    margin-left: 16rem;
+  width: 45rem;
+  margin-left: 16rem;
 }
 
 h2 {
-    margin-left: 0rem;
-    font-family: 'Delicious SC', sans-serif;
-    font-size: 2.2rem;
-    text-transform: lowercase;
-    line-height: 1;
-    letter-spacing: .1em;
+  margin-left: 0rem;
+  font-family: 'Delicious SC', sans-serif;
+  font-size: 2.2rem;
+  text-transform: lowercase;
+  line-height: 1;
+  letter-spacing: .1em;
 }
 
 /* === Header ============================================== */
 
-img.logo {
+.logo {
   position: absolute;
   top: 0;
-  left: 21.6rem;
-  opacity: 0.5;
+  right: 20rem;
+  background: url(../graphics/bow_logo.png) no-repeat;
+  width: 7rem;
+  height: 15.8rem;
+  background-size: 7rem 15.8rem; /* must match height and width of element */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5), 
+only screen and (min-resolution: 240dpi) {
+  .logo {
+    background-image: url(../graphics/bow_logo@2x.png);
+  }
 }
 
 header {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 header h1 {
-    font-family: 'Rosarivo', 'Josefin Slab', serif;
-    font-size: 5rem;
-    margin-left: -3.8rem;
+  font-family: 'Rosarivo', 'Josefin Slab', serif;
+  font-size: 5rem;
+  margin-left: -3.8rem;
+  padding-top: 12.1rem;
 }
 header h2 {
-    margin-top: 0.5rem;
-    margin-left: 10.8rem;
+  margin-top: 0.5rem;
+  margin-left: 10.8rem;
 }
 
 /* === Intro ============================================== */
 
 #intro {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 #intro p {
-    line-height: 1.3;
-    margin-left: 10.8rem;
+  line-height: 1.3;
+  margin-left: 10.8rem;
 }
 
 /* === Contact ============================================== */
 
 address {
-    margin-top: 6rem;
-    font-size: 1.8rem;
-    /* letter-spacing: 0.1em; */
+  margin-top: 6rem;
+  font-size: 1.8rem;
+  /* letter-spacing: 0.1em; */
 }
 address h2 + p {
-    margin-top: -1.9rem;
+  margin-top: -1.9rem;
 }
 address p {
-    margin-left: 10.8rem;
-    line-height: 1.1;
+  margin-left: 10.8rem;
+  line-height: 1.1;
 }
 
 /* === Bows ============================================== */
 
 #bows {
-    width: 100%;
-    margin: 0;
-    margin-top: 10rem;
+  width: 100%;
+  margin: 0;
+  margin-top: 10rem;
 }
 #bows h2 {
-    margin-left: 16rem;
+  margin-left: 16rem;
 }
 #bows p {
-    margin-top: 0.75rem;
-    margin-left: 16rem;
+  margin-top: 0.75rem;
+  margin-left: 16rem;
 }
 #bows img {
-    margin-top: 3rem;
+  margin-top: 3rem;
+  width: 400px;
+  margin-right: 2rem;
 }
-#bows img.left {
-    margin-right: 2rem;
+#bows img + img {
+  margin-right: 0;
 }
 
 /* === Footer ============================================== */
 footer {
-    margin: 8rem auto 4rem;
-    text-align: center;
+  margin: 8rem auto 4rem;
+  text-align: center;
 }
 footer img {
-    width: 120px;
-    opacity: 0.2;
-    margin: 0rem 0rem 1.5rem -1rem;
+  width: 150px;
+  margin: 0rem 0rem 1.5rem -1rem;
 }
 footer p {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8em;
 }
 footer .lead-in {
-    text-transform: lowercase;
-    font-family: 'Delicious SC';
-    letter-spacing: 1pt;
+  text-transform: lowercase;
+  font-family: 'Delicious SC';
+  letter-spacing: 1pt;
 }

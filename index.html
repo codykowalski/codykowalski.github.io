@@ -3,7 +3,7 @@ layout: base
 ---
 
 <header>
-    <img class="logo" src="graphics/bow.png" width="55" height="auto" />
+    <div class="logo" ></div>
     <h1>Cody Kowalski</h1>
     <h2>Maker of Violin, <br />Viola &amp; Cello Bows</h2>
 </header>
@@ -50,8 +50,8 @@ layout: base
     
     <figure>
         <script language="JavaScript">
-        document.write('<img src="images/kowalski-2013-08-violin-a' + imageSuffix + '.jpg" width="400" class="left" />')
-        document.write('<img src="images/kowalski-2013-08-violin-b' + imageSuffix + '.jpg" width="400" class="right" />')
+        image('images/kowalski-2013-08-violin-a.jpg', true, 'Violin bow mounted in silver - head')
+        image('images/kowalski-2013-08-violin-b.jpg', true, 'Violin bow mounted in silver - frog')
         </script>
 
         <p class="desc">Violin bow mounted in silver</p>
@@ -60,8 +60,8 @@ layout: base
     
     <figure>
         <script language="JavaScript">
-        document.write('<img src="images/kowalski-2011-12-cello-a' + imageSuffix + '.jpg" width="400" class="left" />')
-        document.write('<img src="images/kowalski-2011-12-cello-b' + imageSuffix + '.jpg" width="400" class="right" />')
+        image('images/kowalski-2011-12-cello-a.jpg', true, 'Cello bow mounted in silver - head')
+        image('images/kowalski-2011-12-cello-b.jpg', true, 'Cello bow mounted in silver - frog')
         </script>
 
         <p class="desc">Cello bow mounted in silver</p>
@@ -69,9 +69,3 @@ layout: base
     </figure>
 
 </section>
-
-<footer>
-    <img src="graphics/monogram150.png" />
-    <p><span class="lead-in">Copyright</span> &copy; 2014 Cody Kowalski</p>
-    <p><span class="lead-in">Typefaces</span> <a href="http://www.exljbris.com/delicious.html">Delicious</a> and <a href="http://www.ugrdesign.com.ar">Rosarivo</a></p>
-</footer>

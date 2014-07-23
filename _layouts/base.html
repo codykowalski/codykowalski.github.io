@@ -15,6 +15,36 @@
   	var imageSuffix = '';
     if (screenIsRetina) { imageSuffix = '@2x' };
     
+    
+    // the retina argument can be a boolean or a string (indicating suffix to add)
+    function image(normal_link, retina, alt_text) {
+      var default_retina_suffix = '@2x'
+      
+      var start = '<img src="'
+      var mid = '" alt="'
+      var end = '" />'
+      var img_link
+      
+      if (!retina) {
+        img_link = normal_link
+      } else {
+        if (screenIsRetina) {
+          
+          var retina_suffix
+          if (typeof retina == 'string') {
+            retina_suffix = retina
+          } else {
+            retina_suffix = default_retina_suffix
+          }
+          img_link = normal_link.replace(/(\.[^\.]+)$/, retina_suffix + '$1')
+        } else {
+          img_link = normal_link
+        }  
+      }
+            
+      document.write(start + img_link + mid + alt_text + end)
+    }
+    
     document.write('<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="graphics/favicon' + imageSuffix + '.gif" />')
     // -->
 	</script>
@@ -26,6 +56,15 @@
 <div id="wrapper">
 
 {{ content }}
+
+<footer>
+  <script type="text/javascript" >
+    image('graphics/monogram.png', true, 'CK')
+  </script>
+  
+  <p><span class="lead-in">Copyright</span> &copy; 2014 Cody Kowalski</p>
+  <p><span class="lead-in">Typefaces</span> <a href="http://www.exljbris.com/delicious.html">Delicious</a> and <a href="http://www.ugrdesign.com.ar">Rosarivo</a></p>
+</footer>
 
 </div>
 
