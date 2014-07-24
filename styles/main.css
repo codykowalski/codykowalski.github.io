@@ -211,7 +211,8 @@ address p {
   width: 400px;
   margin-right: 2rem;
 }
-#bows img + img {
+#bows img + img,
+#bows img.right {
   margin-right: 0;
 }
 
@@ -221,7 +222,8 @@ footer {
   text-align: center;
 }
 footer img {
-  width: 150px;
+  width: 100px;
+  height: 100px;
   margin: 0rem 0rem 1.5rem -1rem;
 }
 footer p {
