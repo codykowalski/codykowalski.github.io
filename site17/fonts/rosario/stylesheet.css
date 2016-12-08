@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'rosarivoitalic';
+    src: url('rosarivo-italic-webfont.woff2') format('woff2'),
+         url('rosarivo-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'rosarivoregular';
+    src: url('rosarivo-regular-webfont.woff2') format('woff2'),
+         url('rosarivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
