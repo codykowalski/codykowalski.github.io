@@ -136,8 +136,8 @@ nav#mobile{
 		top: 170px;
 	}
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 380px){
 	nav#mobile{
-		top: 210px;
+		top: 250px;
 	}
 }

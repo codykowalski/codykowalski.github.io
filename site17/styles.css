@@ -455,7 +455,7 @@ clear:both;
   section#about #bio{
     display: block;
     width: auto;
-    padding: 65px 60px 45px 60px;
+    padding: 65px 40px 45px 40px;
   }
 }
 @media screen and (max-width: 800px){
@@ -564,6 +564,11 @@ clear:both;
   #gallery h2{
     margin: 0 0 30px 20px;
   }
+  section#about #bio{
+    display: block;
+    width: auto;
+    padding: 65px 30px 45px 30px;
+  }
 }
 @media screen and (max-width: 430px){
   header #logo .ck{
@@ -577,26 +582,32 @@ clear:both;
   }
 }
 @media screen and (max-width: 400px){
-  header #logo{
-    float: none;
-  }
   header #logo .ck{
-    padding: 0 65px 0 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
   }
   header #logo .ck h1{
-    padding: 45px 0 0 0;
     font-size: 30px;
-    line-height: 38px;
   }
-  header #logo .ck span{
-    display: block;
+  header #logo .head-logo{
+    bottom: 16px;
+  }
+}
+@media screen and (max-width: 380px){
+  header #logo .ck{
+    padding: 120px 0 0 0;
+    margin: 0 0 5px 0;
+  }
+  header #logo .ck h1{
+    text-align: right;
   }
   header #logo .head-logo{
     bottom: auto;
-    top:0px;
+    top: 0px;
+    right: 0px;
   }
-  header #logo .head-logo img{
-    width: 35px;
+}
+@media screen and (max-width: 300px){
+  header #logo .ck h1{
+    font-size: 26px;
   }
 }
