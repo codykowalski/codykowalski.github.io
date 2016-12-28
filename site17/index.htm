@@ -6,24 +6,26 @@
     <!--------------------CSS------------------>
     <link rel="stylesheet" href="styles.css" type="text/css" />
 		<link rel="stylesheet" href="js/flexslider/flexslider.css" />
+		<link rel="stylesheet" href="js/slicknav/slicknav.css" />
 
 		<!--------------------Scripts------------------>
 		<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
 		<script src="js/flexslider/jquery.flexslider.js"></script>
+		<script src="js/slicknav/jquery.slicknav.js"></script>
   </head>
   <body>
     <header id="top">
       <div class="max-width">
         <div id="logo">
           <div class="ck">
-            <h1>Cody Kowalski</h1>
+            <h1><span>Cody</span> <span>Kowalski</span></h1>
             <div class="head-logo"><img src="images/head-logo.svg" /></div>
           </div>
           <div class="tagline">Maker of Violin, Viola & Cello Bows</div>
         </div>
         <div class="clear"></div>
       </div>
-      <nav>
+      <nav id="main">
         <ul>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
@@ -31,6 +33,20 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+			<nav id="mobile"></nav>
+			<script type="text/javascript">
+					$(document).ready(function(){
+							$('nav#main').slicknav({
+									label: '',
+									duration: 400,
+									prependTo:'nav#mobile',
+									closedSymbol: '',
+									openedSymbol: ''
+							});
+					var menuWidth = $(".slicknav_nav").width();
+					$(".slicknav_nav").animate({'right' : "-=" + (menuWidth) + "px"}, 0);
+			});
+			</script>
       <div class="overlay"></div>
     </header>
     <section id="contact">
@@ -61,31 +77,31 @@
 				          </div>
 				        </div>
 				        <div class="table">
-				          <div class="table-cell col-50 col-left">
+				          <div class="table-cell col-65 col-left">
 				            <p class="title">Violin bow mounted in gold, 2016</p>
 				            <p class="awards">VSA International Competition - Gold Medal</p>
 				          </div>
-				          <div class="medals table-cell col-50 col-right">
+				          <div class="medals table-cell col-35 col-right">
 				            <img src="gallery/vsa_violin_gold.png" alt="VSA Gold Medal" />
 				            <img src="gallery/vsa_seal.png" alt="VSA Seal" />
 				          </div>
 				        </div>
 							</div>
 						</li>
-						<!-- July 2016 Violin Silver -->
+						<!-- 2015 Violin Silver -->
 						<li>
 							<div class="inner">
 								<div class="bows table">
 				          <div class="table-cell col-50 col-left">
-				            <img src="gallery/violin_july_16_1.jpg" alt="Violin Bow July 2016" />
+				            <img src="gallery/violin_2015_1.jpg" alt="Violin Bow July 2015" />
 				          </div>
 				          <div class="table-cell col-50 col-right">
-				            <img src="gallery/violin_july_16_2.jpg" alt="Violin Bow July 2016" />
+				            <img src="gallery/violin_2015_2.jpg" alt="Violin Bow July 2015" />
 				          </div>
 				        </div>
 				        <div class="table">
 				          <div class="table-cell col-left">
-				            <p class="title">Violin bow mounted in silver, 2016</p>
+				            <p class="title">Violin bow mounted in silver, 2015</p>
 				          </div>
 				        </div>
 							</div>
@@ -120,11 +136,11 @@
 				          </div>
 				        </div>
 				        <div class="table">
-				          <div class="table-cell col-50 col-left">
+				          <div class="table-cell col-65 col-left">
 				            <p class="title">Viola bow mounted in gold, 2016</p>
 				            <p class="awards">VSA International Competition - Gold Medal</p>
 				          </div>
-				          <div class="medals table-cell col-50 col-right">
+				          <div class="medals table-cell col-35 col-right">
 				            <img src="gallery/vsa_viola_gold.png" alt="VSA Gold Medal" />
 				            <img src="gallery/vsa_seal.png" alt="VSA Seal" />
 				          </div>
@@ -180,11 +196,11 @@
 				          </div>
 				        </div>
 				        <div class="table">
-				          <div class="table-cell col-50 col-left">
+				          <div class="table-cell col-65 col-left">
 				            <p class="title">Cello bow mounted in gold, 2016</p>
 				            <p class="awards">VSA International Competition - Gold Medal</p>
 				          </div>
-				          <div class="medals table-cell col-50 col-right">
+				          <div class="medals table-cell col-35 col-right">
 				            <img src="gallery/vsa_cello_gold.png" alt="VSA Gold Medal" />
 				            <img src="gallery/vsa_seal.png" alt="VSA Seal" />
 				          </div>
@@ -240,7 +256,7 @@
             <div class="inner">
               <h2>Cody Kowalski, Bow Maker</h2>
               <p>Cody Kowalski grew up in an artistic family on a small island near Port Townsend, Washington. At a young age, he revealed a natural adeptness for creating with his hands and, at the age of twelve, had the opportunity to visit bow maker Charles Espey, with whom he began learning wood working and jewelry making techniques. A year later, this informal learning experience developed into the project of making his first violin bow.</p>
-              <p>Kowalski continued to make bows under Espey’s guidance throughout his years of his youth, and traveled to Ireland and France to meet European bow makers in 2013. Kowalski’s current work is influenced by both traditional and modern styles.</p>
+              <p>Kowalski continued to make bows under Espey’s guidance throughout his years of high school, and traveled to Ireland and France to meet European bow makers in 2013. Kowalski’s current work is influenced by both traditional and modern styles.</p>
             </div>
           </div>
         </div>

@@ -89,34 +89,20 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Control Nav */
-#banner .flex-control-nav {position: absolute; left: 40px; right: 40px; bottom: 30px; text-align: right; z-index: 200; display: block;}
-#main-content #banner .flex-control-nav {bottom: 20px;}
-#banner .flex-control-nav li {margin: 0 0 0 8px; display: inline-block; zoom: 1; *display: inline;}
-#banner .flex-control-paging li a {width:10px; height: 10px; display: block; background: rgba(255,255,255, 0.6); cursor: pointer; text-indent: 9999px; overflow:hidden; -webkit-border-radius:60px; -moz-border-radius: 60px; -o-border-radius: 60px; border-radius: 60px;}
-#banner .flex-control-paging li a:hover {
-  background: rgba(255,255,255,1);
-  -webkit-transition: background 0.4s linear;
-  -moz-transition: background 0.4s linear;
-  -ms-transition: background 0.4s linear;
-  -o-transition: background 0.4s linear;
-  transition: background 0.4s linear;
-}
-#banner .flex-control-paging li a.flex-active { background: rgba(255,255,255,1); cursor: default; }
-
-.page-slideshow .flex-control-nav {
+.flex-control-nav {
   position: absolute;
   right: 0px;
   left: 0px;
-  bottom: 0px;
+  bottom: 20px;
   padding: 10px 15px;
-  text-align: right;
+  text-align: center;
   z-index: 100;
-  display: block;
+  display: none;
   margin:0 0;
 }
-.page-slideshow .flex-control-nav li {margin: 0 0 0 8px; display: inline-block; zoom: 1; *display: inline;}
-.page-slideshow .flex-control-paging li a {width: 10px; height: 10px; display: block; background: rgba(255,255,255, 0.6); cursor: pointer; text-indent: 9999px; overflow:hidden; -webkit-border-radius:60px; -moz-border-radius: 60px; -o-border-radius: 60px; border-radius: 60px;}
-.page-slideshow .flex-control-paging li a:hover {
+.flex-control-nav li {margin: 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 8px; height: 8px; display: block; background: #444444; cursor: pointer; text-indent: 9999px; overflow:hidden; -webkit-border-radius:60px; -moz-border-radius: 60px; -o-border-radius: 60px; border-radius: 60px;}
+.flex-control-paging li a:hover {
   background: rgba(255,255,255,1);
   -webkit-transition: background 0.4s linear;
   -moz-transition: background 0.4s linear;
@@ -124,7 +110,7 @@ html[xmlns] .slides {display: block;}
   -o-transition: background 0.4s linear;
   transition: background 0.4s linear;
 }
-.page-slideshow .flex-control-paging li a.flex-active { background: rgba(255,255,255,1); cursor: default; }
+.flex-control-paging li a.flex-active { background: #cbc7bb; cursor: default; }
 
 .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
 .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
@@ -132,19 +118,22 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
-@media screen and (max-width: 1100px){
-  .flex-direction-nav {
-    display: none;
+@media screen and (max-width: 1250px){
+  .flex-direction-nav a {
+    margin-top:-25px;
+  }
+  .flex-direction-nav a span{
+    width: 15px;
+    height: 50px;
+    display: block;
   }
 }
-@media screen and (max-width: 1100px){
-  #banner .flex-control-nav {
-    right: 30px;
-    bottom: 20px;
-  }
-}
-@media screen and (max-width: 768px){
-  #banner .flex-control-nav {
+@media screen and (max-width: 530px){
+  .flex-direction-nav{
     display: none;
   }
+  .flex-control-nav{
+    display: block;
+  }
+
 }

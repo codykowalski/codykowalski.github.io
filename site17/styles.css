@@ -1,6 +1,7 @@
 /* -- Import fonts -- */
 @import url('fonts/rosario/stylesheet.css');
 @import url('fonts/delicious/stylesheet.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 /*-- Layout --*/
 
@@ -28,12 +29,13 @@ body{
   color: #000000;
   font-size: 14pt;
   line-height: 24pt;
+  overflow-x: hidden;
 }
 header{
-  background: url('images/hero2-blur.jpg');
+  background: url('images/hero3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: top left;
   position: relative;
   height: 450px;
 }
@@ -60,17 +62,18 @@ header #logo{
 header #logo .ck{
   padding: 80px 110px 0 0;
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 header #logo .ck h1{
   font-family: "rosarivoregular", serif;
   font-size: 58px;
+  line-height: 48px;
   color: #fbf7e9;
 }
 header #logo .head-logo{
   position: absolute;
   right: 0px;
-  bottom: 0px;
+  bottom: 7px;
   right: 7px;
 }
 header #logo .head-logo img{
@@ -99,18 +102,23 @@ header nav ul li{
   display: inline-block;
 }
 header nav ul li a{
-  font-family: "deliciousbold", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fbf7e9;
-  letter-spacing: 4px;
-  font-size: 18px;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 400;
   text-transform: uppercase;
-  padding: 60px 0px 5px 0px;
+  padding: 50px 17px 5px 20px;
   display: block;
-  margin: 0px 17px 0px 20px;
 }
 header nav ul li a:hover{
   color: #fbf7e9;
-  border-bottom: 2px solid #fbf7e9;
+  background: rgba(251, 247, 233, 0.20);
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 section#contact{
   padding: 60px 0;
@@ -129,7 +137,7 @@ section#gallery .inner{
 section#gallery .max-width{
   position: static;
   max-width: 1086px;
-  padding: 0 30px !important;
+  padding: 0 30px;
 }
 section#gallery img{
   max-width: 100%;
@@ -171,7 +179,7 @@ footer{
   background: url('images/hero6.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: top left;
   position: relative;
   padding: 65px 0;
   text-align: center;
@@ -203,7 +211,7 @@ h2, h2 a{
 }
 #gallery h2{
   color:#cbc7bb;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px 20px;
 }
 h3{
   font-family: "rosarivoregular", serif;
@@ -236,6 +244,7 @@ p{
 footer p{
   color:#cbc7bb;
   font-size: 10pt;
+  line-height: 20pt;
   margin: 0 0 0 0;
 }
 footer p a:hover{
@@ -366,9 +375,228 @@ width:5px;
 clear:both;
 }
 
-@media screen and (max-width: 350px){
-  .single-product .table-cell:nth-of-type(2) img{
-    float: none !important;
-    margin: 0px auto 10px !important;
+@media screen and (max-width: 1250px){
+  .max-width{
+    padding: 0 40px;
+  }
+  section#gallery .max-width{
+    padding: 0 50px;
+  }
+  header #logo .ck{
+    padding: 60px 80px 0 0;
+    margin: 0 0 12px 0;
+  }
+  header #logo .ck h1{
+    font-size: 50px;
+  }
+  header #logo .head-logo{
+    bottom: 10px;
+  }
+  header #logo .head-logo img{
+    width: 40px;
+  }
+  header #logo .tagline{
+    letter-spacing: 3px;
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 300px;
+  }
+  header nav{
+    right:40px;
+  }
+  header nav ul li a{
+    padding: 50px 14px 5px 17px;
+  }
+}
+@media screen and (max-width: 1150px){
+  section#about .max-width{
+    padding-left: 0px;
+  }
+  header nav ul li a{
+    font-size: 13px;
+    padding: 45px 12px 5px 15px;
+  }
+}
+@media screen and (max-width: 1100px){
+  header #logo .ck{
+    padding: 45px 65px 0 0;
+    margin: 0 0 5px 0;
+  }
+  header #logo .ck h1{
+    font-size: 40px;
+  }
+  header #logo .head-logo{
+    bottom: 12px;
+  }
+  header #logo .head-logo img{
+    width: 30px;
+  }
+  header #logo .tagline{
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 2.2px;
+    max-width: 260px;
+  }
+}
+@media screen and (max-width: 900px){
+  section#gallery .medals img{
+    width: 60px;
+    margin: 0 0 0 10px;
+  }
+  section#about .max-width{
+    padding-right: 0px;
+  }
+  section#about #image{
+    display: block;
+    width: auto;
+    height: 500px;
+    background-position: center center;
+  }
+  section#about #bio{
+    display: block;
+    width: auto;
+    padding: 65px 60px 45px 60px;
+  }
+}
+@media screen and (max-width: 800px){
+  section#gallery .max-width{
+    padding: 0 40px;
+  }
+  section#gallery .bows{
+    margin: 0 0 20px 0;
+  }
+  section#gallery .col-left, section#gallery .col-right{
+    display: block;
+    width: auto;
+    padding: 0 0;
+    vertical-align: top;
+    text-align: center;
+  }
+  section#gallery .inner{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  section#gallery .col-left img{
+    margin: 0 0 20px 0;
+  }
+  section#gallery .medals{
+    padding: 30px 0 0 0;
+  }
+  section#gallery .medals img{
+    width: 75px;
+    margin: 0 5px;
+  }
+}
+@media screen and (max-width: 550px){
+  header #logo{
+    float: right;
+  }
+  header #logo .ck{
+    padding: 60px 80px 0 0;
+    margin: 0 0 12px 0;
+  }
+  header #logo .ck h1{
+    font-size: 50px;
+  }
+  header #logo .head-logo{
+    bottom: 10px;
+  }
+  header #logo .head-logo img{
+    width: 40px;
+  }
+  header #logo .tagline{
+    letter-spacing: 3px;
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 300px;
+  }
+  section#gallery .medals{
+    padding: 20px 0 0 0;
+  }
+  section#gallery .medals img{
+    width: 60px;
+  }
+}
+@media screen and (max-width: 530px){
+  .max-width{
+    padding: 0 30px;
+  }
+  header #logo .ck{
+    padding: 45px 65px 0 0;
+    margin: 0 0 8px 0;
+  }
+  header #logo .ck h1{
+    font-size: 40px;
+  }
+  header #logo .head-logo{
+    bottom: 12px;
+  }
+  header #logo .head-logo img{
+    width: 30px;
+  }
+  header #logo .tagline{
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 2.2px;
+    max-width: 260px;
+  }
+  section#gallery{
+    padding: 65px 0 85px;
+  }
+  section#gallery .max-width{
+    padding: 0 10px;
+  }
+  section#gallery .inner{
+    max-width: none;
+  }
+  section#gallery p.title{
+    font-size: 11pt;
+    line-height: 16pt;
+  }
+  #gallery p.awards{
+    font-size: 11pt;
+    line-height: 16pt;
+  }
+  h2, h2 a{
+    font-size: 26px;
+    line-height: 36px;
+  }
+  #gallery h2{
+    margin: 0 0 30px 20px;
+  }
+}
+@media screen and (max-width: 430px){
+  header #logo .ck{
+    margin: 0 0 5px 0;
+  }
+  header #logo .ck h1{
+    font-size: 35px;
+  }
+  header #logo .head-logo{
+    bottom: 15px;
+  }
+}
+@media screen and (max-width: 400px){
+  header #logo{
+    float: none;
+  }
+  header #logo .ck{
+    padding: 0 65px 0 0;
+    margin: 0 0 10px 0;
+  }
+  header #logo .ck h1{
+    padding: 45px 0 0 0;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  header #logo .ck span{
+    display: block;
+  }
+  header #logo .head-logo{
+    bottom: auto;
+    top:0px;
+  }
+  header #logo .head-logo img{
+    width: 35px;
   }
 }
