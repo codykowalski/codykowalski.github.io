@@ -141,6 +141,7 @@ section#gallery .max-width{
 }
 section#gallery img{
   max-width: 100%;
+  width: 100%;
 }
 section#gallery .col-left{
   padding: 0 20px 0 0;
